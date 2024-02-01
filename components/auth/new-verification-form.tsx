@@ -35,11 +35,11 @@ export default function NewVerificationForm() {
             .catch((error) => {
                 setError("Something went wrong!");
             });
-    }, [token]);
+    }, [token, success, error]);
 
     useEffect(() => {
         onSubmit();
-    }, [])
+    }, [onSubmit])
 
   return (
     <CardWrapper
