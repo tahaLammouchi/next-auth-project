@@ -12,6 +12,7 @@ generator client {
 enum UserRole {
   USER
   ADMIN
+  Fournisseur
 }
 
 model User {
@@ -23,6 +24,7 @@ model User {
   password      String?
   role          UserRole @default(USER)
   accounts      Account[]
+  Fournisseur   Fournisseur?
   isTwoFactorEnabled Boolean @default(false)
   twoFactorConfirmation TwoFactorConfirmation?
 }
@@ -79,6 +81,22 @@ model Account {
     
     userId String
     user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@unique([userId])
+  }
+
+  model Fournisseur {
+    id String @id @default(cuid())
+    nom String
+    telephone String
+    raisonSociale String
+    numMatriculeFiscale String
+    adresse String
+    ville String
+    codePostal String
+    email String @unique
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+    userId String
 
     @@unique([userId])
   }

@@ -9,7 +9,7 @@ import { LoginSchema, NewPasswordSchema, RegisterSchema, ResetSchema } from "../
 import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
 import { AuthError } from "next-auth";
 import { getUserByEmail } from "./user.actions";
-import { sendPasswordResetEmail, sendTwoFactorTokenEmail, sendVerificationEmail } from "../mail";
+import { sendPasswordResetEmail, sendTwoFactorTokenEmail, sendVerificationEmail } from "../mail/mail";
 import { db } from "../db";
 
 

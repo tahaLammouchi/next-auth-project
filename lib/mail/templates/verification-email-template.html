@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Email</title>
+    <style>
+        /* Basic reset */
+        body, html { margin: 0; padding: 0; width: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        .container { background-color: #f0f0f0; padding: 20px; }
+        /* Styling the email content */
+        .email-content { max-width: 600px; margin: auto; background: white; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 8px; }
+        .header img { max-height: 50px; margin-bottom: 20px; }
+        .greeting h2 { color: #333; }
+        .body-text { color: white; line-height: 1.5; margin: 20px 0; }
+        .button { display: block; width: max-content; background-color: #000000; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; margin: auto; }
+        .footer { margin-top: 20px; text-align: center; color: #999; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="email-content">
+
+            <main class="body-content">
+                <div class="greeting">
+                    <h2>Hi,</h2>
+                </div>
+                <div class="body-text">
+                    <p class="font-semibold text-2xl">Please click the button below to verify your email.</p>
+                    <a href="{{confirmLink}}" class="button" style="color: white; text-decoration: none;">Verify your email</a>
+                </div>
+                <div class="footer-text">
+                    <p class="font-semibold text-xl">Thanks,<br>Entrepot Team 🛒</p>
+                </div>
+            </main>
+            <footer class="footer">
+                <p>© {{year}} Entrepot. All Rights Reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

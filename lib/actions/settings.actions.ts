@@ -7,7 +7,7 @@ import { SettingsSchema } from "../validations";
 import { currentUser } from "../auth";
 import { getUserByEmail, getUserById } from "./user.actions";
 import { generateVerificationToken } from "./auth.actions";
-import { sendVerificationEmail } from "../mail";
+import { sendVerificationEmail } from "../mail/mail";
 
 export async function settings (values: z.infer<typeof SettingsSchema>) {
     const validatedFields = SettingsSchema.safeParse(values);
